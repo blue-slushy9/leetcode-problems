@@ -1,6 +1,6 @@
 #include <stdio.h>
 // We need stdlib for malloc
-#include <stdlib.h>
+//#include <stdlib.h>
 
 /**
  * Note: The returned array must be malloced, assume caller calls free().
