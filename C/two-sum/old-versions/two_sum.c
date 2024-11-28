@@ -2,10 +2,6 @@
 // We need stdlib for malloc
 #include <stdlib.h>
 
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
-
 // Declare function that will add the two numbers and return resulting array
 int* twoSum(int* nums, int numsSize, int target, int* returnSize); 
 
