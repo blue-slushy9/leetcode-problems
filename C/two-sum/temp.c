@@ -23,15 +23,11 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
                 // Verify memory was successfully allocated
                 if (arr == NULL) {
                     printf("Memory allocation failed.\n");
-                    // The output array will be empty since memory allocation failed
-                    *returnSize = 0;
                     return NULL;
                 }
                 // Initialize array that will hold the two elements
                 arr[0] = i;
                 arr[1] = j;
-                // Set the size of the returned array
-                *returnSize = 2;
                 // DEBUG
                 printf("i: %d\n", arr[0]);
                 printf("j: %d\n", arr[1]);
@@ -39,9 +35,7 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
                 return arr;
             }
         }
-    }  
+    }   
     // If no solution is found
-    // The output array will be empty since memory allocation failed
-    *returnSize = 0;
-    return NULL; 
+    return NULL;
 }
