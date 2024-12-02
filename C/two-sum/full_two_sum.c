@@ -4,6 +4,9 @@
 // We need stdlib for malloc
 #include <stdlib.h>
 
+// Declare function that takes the user input to create the nums array
+int* createNums();
+
 // Declare function that will add the two numbers and return resulting array
 int* twoSum(int* nums, int numsSize, int target, int* returnSize); 
 
@@ -40,25 +43,8 @@ int main() {
     return 0;
 }
 
-// nums is the starting array, numsSize is the size of that array,
-// target is the final sum of the two elements, returnSize is the size of the final array
-int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
-    // Allocate memory for the output array that holds our two numbers;
-    // '*returnSize' dereferences the pointer to yield the value it points to
-    int* arr = (int*)malloc((*returnSize) * sizeof(int));
-    if (arr == NULL) {
-        printf("Memory allocation failed.\n");
-        return NULL;
-    }
-    // Initialize array
-    // nums[0] = 0
-    arr[0] = nums[0];
-    // nums[4] = 69
-    arr[1] = nums[4];
-    return arr;
-}
-
-
+// Define function that takes the user input to create the nums array
+int* createNums();
 
 int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
     // Define loop limit for num1, we only need one less than the array size 
@@ -104,3 +90,23 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
     *returnSize = 0;
     return NULL; 
 }
+
+/* Old version of this function
+// nums is the starting array, numsSize is the size of that array,
+// target is the final sum of the two elements, returnSize is the size of the final array
+int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
+    // Allocate memory for the output array that holds our two numbers;
+    // '*returnSize' dereferences the pointer to yield the value it points to
+    int* arr = (int*)malloc((*returnSize) * sizeof(int));
+    if (arr == NULL) {
+        printf("Memory allocation failed.\n");
+        return NULL;
+    }
+    // Initialize array
+    // nums[0] = 0
+    arr[0] = nums[0];
+    // nums[4] = 69
+    arr[1] = nums[4];
+    return arr;
+}
+*/
