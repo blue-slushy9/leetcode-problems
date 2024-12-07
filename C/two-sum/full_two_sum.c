@@ -43,8 +43,31 @@ int main() {
     return 0;
 }
 
+// Define function that allocates memory
+int* createArr(int* length) {
+    // Allocate memory for the output array that holds our two numbers;
+    // '*length' dereferences the pointer to yield the value it points to
+    int* arr = (int*)malloc((*length) * sizeof(int));
+    // Verify memory was successfully allocated
+    if (arr == NULL) {
+        printf("Memory allocation failed.\n");
+        // The output array will be empty since memory allocation failed
+        *length = 0;
+        return NULL;
+    }
+    // Else, if malloc was successful return the array that will store the elements
+    return arr;
+}
+
 // Define function that takes the user input to create the nums array
-int* createNums();
+int* createNums() {
+    printf("Please enter the length of your array: ");
+    int arr_length;
+    scanf("%d", &arr_length);
+    printf("You entered %d\n", arr_length);
+    // Call function to allocate memory for the nums array
+    createArr(&arr_length);
+}
 
 int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
     // Define loop limit for num1, we only need one less than the array size 
