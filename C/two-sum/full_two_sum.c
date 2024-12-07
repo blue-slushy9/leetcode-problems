@@ -67,6 +67,7 @@ int* createNums() {
     printf("You entered %d\n", arr_length);
     // Call function to allocate memory for the nums array
     createArr(&arr_length);
+    // Initialize the nums array
 }
 
 int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
